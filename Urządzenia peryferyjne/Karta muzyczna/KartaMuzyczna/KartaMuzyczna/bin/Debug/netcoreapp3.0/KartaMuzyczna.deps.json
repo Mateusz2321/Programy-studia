@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "KartaMuzyczna/1.0.0": {
+        "dependencies": {
+          "Interop.WMPLib": "1.0.0.0"
+        },
+        "runtime": {
+          "KartaMuzyczna.dll": {}
+        }
+      },
+      "Interop.WMPLib/1.0.0.0": {
+        "runtime": {
+          "Interop.WMPLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KartaMuzyczna/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.WMPLib/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

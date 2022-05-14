@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+    tools { 
+        maven 'mvn' 
+        jdk 'jdk' 
+        git 'git'
+    }	
+
+    stages {
+        stage('Build') {
+            steps {
+		        bat 'mvn -B -DskipTests clean package'
+            }
+        }
+        stage('Test') {
+            steps {
+                bat 'echo "Testing.."'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                bat 'echo "Deploying...."'
+                bat 'mvn deploy'
+            }
+        }
+        stage('PushGit') {
+            steps {
+                bat 'git checkout JenkinsOut'
+                bat 'echo "Pushing builded application to git."'
+            }
+        }
+    }
+    triggers{
+        cron 'H/3 * * * *'
+    
+    }
+}

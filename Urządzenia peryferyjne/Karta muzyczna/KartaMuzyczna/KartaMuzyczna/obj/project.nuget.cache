@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "1kkMYgoOrzvz7OmohJzMucl03IDN4d9vYalThy1pzNLCmVxSAnp2ajygxbggR5YYshIz+ysX29rKTgeZJCwK+Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mateu\\Desktop\\Urządzenia peryferyjne\\Laboratoria\\Ostatnie zadanie karta muzyczna\\KartaMuzyczna\\KartaMuzyczna\\KartaMuzyczna.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mateu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\mateu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\mateu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\mateu\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

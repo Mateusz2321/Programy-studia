@@ -1,0 +1,9 @@
+---
+Test
+---
+!include DodawaniePokoju
+!|testyfitnessefixture.TestZnajdowaniePokoju|
+| nrPokoju	| znajdzPokoj?	|
+| 6			| true			|
+| 7			| true			|
+| 1			| false			|

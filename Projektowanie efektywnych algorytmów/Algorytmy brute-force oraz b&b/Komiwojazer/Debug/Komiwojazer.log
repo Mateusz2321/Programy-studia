@@ -1,0 +1,19 @@
+﻿  Komiwojazer.cpp
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(47,2): warning C4091: "typedef ": zignorowano na lewo od "Node" podczas gdy brak deklaracji zmiennej
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(404,13): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(410,13): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(419,13): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(479,53): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(47,2): warning C4091: "typedef ": zignorowano na lewo od "Node" podczas gdy brak deklaracji zmiennej
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(47): warning C26495: Zmienna „Node::number” jest niezainicjowana. Zawsze inicjuj zmienną składową (type.6).
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(368): warning C6031: Ignorowana wartość zwrotna: „getchar”.
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(369): warning C6031: Ignorowana wartość zwrotna: „getchar”.
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(387): warning C6031: Ignorowana wartość zwrotna: „getchar”.
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(388): warning C6031: Ignorowana wartość zwrotna: „getchar”.
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(449): warning C6031: Ignorowana wartość zwrotna: „getchar”.
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(450): warning C6031: Ignorowana wartość zwrotna: „getchar”.
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(509): warning C6031: Ignorowana wartość zwrotna: „getchar”.
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(510): warning C6031: Ignorowana wartość zwrotna: „getchar”.
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(500): warning C6001: Używanie niezainicjowanej pamięci „visited”.
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(471): warning C26451: Przepełnienie arytmetyczne: użycie operatora „-” dla wartości bajtowej 4, a następnie rzutowanie wyniku na wartość bajtową 8. Rzutuj wartość na szerszy typ przed wywołaniem operatora „-” w celu uniknięcia przepełnienia (io.2).
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap1\Komiwojazer\Komiwojazer\Komiwojazer.cpp(479): warning C26451: Przepełnienie arytmetyczne: użycie operatora „-” dla wartości bajtowej 4, a następnie rzutowanie wyniku na wartość bajtową 8. Rzutuj wartość na szerszy typ przed wywołaniem operatora „-” w celu uniknięcia przepełnienia (io.2).

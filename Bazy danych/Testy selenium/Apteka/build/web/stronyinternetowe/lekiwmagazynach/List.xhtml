@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListLekiwmagazynachTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListLekiwmagazynachEmpty}" rendered="#{lekiwmagazynachController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{lekiwmagazynachController.items.rowCount > 0}">
+                    <h:outputText value="#{lekiwmagazynachController.pagination.pageFirstItem + 1}..#{lekiwmagazynachController.pagination.pageLastItem + 1}/#{lekiwmagazynachController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{lekiwmagazynachController.previous}" value="#{bundle.Previous} #{lekiwmagazynachController.pagination.pageSize}" rendered="#{lekiwmagazynachController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{lekiwmagazynachController.next}" value="#{bundle.Next} #{lekiwmagazynachController.pagination.pageSize}" rendered="#{lekiwmagazynachController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{lekiwmagazynachController.items}" id="lekiwmagazynach" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekiwmagazynachTitle_nrWiersza}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nrWiersza}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekiwmagazynachTitle_ilosc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ilosc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekiwmagazynachTitle_idLeku}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idLeku}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekiwmagazynachTitle_idMagazynu}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idMagazynu}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{lekiwmagazynachController.prepareView}" value="#{bundle.ListLekiwmagazynachViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{lekiwmagazynachController.prepareEdit}" value="#{bundle.ListLekiwmagazynachEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{lekiwmagazynachController.destroy}" value="#{bundle.ListLekiwmagazynachDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{lekiwmagazynachController.prepareCreate}" value="#{bundle.ListLekiwmagazynachCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListLekiwmagazynachIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

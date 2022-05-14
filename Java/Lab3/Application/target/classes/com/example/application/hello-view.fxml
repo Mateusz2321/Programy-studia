@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.application.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane prefHeight="560.0" prefWidth="756.0">
+      <children>
+         <ComboBox fx:id="cb1" layoutX="34.0" layoutY="206.0" prefHeight="26.0" prefWidth="188.0" />
+
+          <Label fx:id="l1" layoutX="34.0" layoutY="33.0" prefHeight="26.0" prefWidth="361.0" text="How many big urban areas is on this continent?" />
+         <Label fx:id="l3" layoutX="2.0" layoutY="136.0" prefHeight="18.0" prefWidth="394.0" text="Choose continent and answer" />
+         <TextField fx:id="tf" layoutX="34.0" layoutY="87.0" />
+         <Button fx:id="tf1" layoutX="207.0" layoutY="87.0" mnemonicParsing="false" onAction="#getUrbanAreasNumber" text="Answer" />
+         <Label fx:id="l7" layoutX="43.0" layoutY="261.0" prefHeight="18.0" prefWidth="274.0" text="How many countries contains this continent ?" />
+         <TextField fx:id="tf4" layoutX="42.0" layoutY="306.0" prefHeight="26.0" prefWidth="159.0" />
+         <Button fx:id="b2" layoutX="230.0" layoutY="306.0" mnemonicParsing="false" onAction="#getContinentData" prefHeight="26.0" prefWidth="114.0" text="Answer" />
+         <Label fx:id="l8" layoutY="361.0" prefHeight="18.0" prefWidth="401.0" text="Choose continent and answer" />
+         <Label fx:id="l2" layoutX="446.0" layoutY="38.0" prefHeight="18.0" prefWidth="216.0" text="City name choosing" />
+         <TextField fx:id="tf2" layoutX="446.0" layoutY="75.0" />
+         <Label fx:id="l4" layoutX="446.0" layoutY="128.0" prefHeight="18.0" prefWidth="284.0" text="How much cities has this name on the world?" />
+         <TextField fx:id="tf3" layoutX="447.0" layoutY="154.0" />
+         <Button fx:id="b1" layoutX="636.0" layoutY="154.0" mnemonicParsing="false" onAction="#getCityData" text="Answer" />
+         <Label fx:id="l6" layoutX="406.0" layoutY="198.0" prefHeight="18.0" prefWidth="351.0" text="Write city name and answer" />
+         <Label fx:id="l5" layoutX="37.0" layoutY="180.0" prefHeight="18.0" prefWidth="195.0" text="Continent choosing" />
+         <Label fx:id="l9" layoutX="439.0" layoutY="279.0" prefHeight="34.0" prefWidth="150.0" text="Choose language" />
+         <CheckBox fx:id="check" layoutX="607.0" layoutY="275.0" mnemonicParsing="false" onAction="#onChange" prefHeight="34.0" prefWidth="126.0" text="English" />
+         <Line endX="228.20001220703125" endY="-1.399993896484375" layoutX="174.0" layoutY="167.0" startX="-146.8000030517578" startY="-1.399993896484375" />
+         <Line endX="282.20001220703125" layoutX="122.0" layoutY="417.0" startX="-100.0" />
+         <Line endX="-76.79998779296875" endY="248.5999755859375" layoutX="481.0" layoutY="261.0" startX="-76.79998779296875" startY="-242.39999389648438" />
+         <Line endX="216.20001220703125" layoutX="504.0" layoutY="242.0" startX="-100.0" />
+         <Button fx:id="bt1" layoutX="416.0" layoutY="366.0" mnemonicParsing="false" onAction="#getUserPreferences" prefHeight="26.0" prefWidth="318.0" text="Get user preferences" />
+         <Label fx:id="l10" layoutX="443.0" layoutY="324.0" prefHeight="18.0" prefWidth="216.0" text="Chosen language: english" />
+         <Button fx:id="bt2" layoutX="418.0" layoutY="403.0" mnemonicParsing="false" onAction="#getSystemPreferences" prefHeight="26.0" prefWidth="318.0" text="Get system preferences" />
+         <Button fx:id="bt3" layoutX="416.0" layoutY="435.0" mnemonicParsing="false" onAction="#setUserPreferences" prefHeight="34.0" prefWidth="318.0" text="Set user preferences" />
+         <Button fx:id="bt4" layoutX="418.0" layoutY="483.0" mnemonicParsing="false" onAction="#setSystemPreferences" prefHeight="34.0" prefWidth="318.0" text="Set system preferences" />
+      </children>
+   </AnchorPane>
+</VBox>

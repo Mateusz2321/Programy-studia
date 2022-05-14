@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListZamowienieTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListZamowienieEmpty}" rendered="#{zamowienieController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{zamowienieController.items.rowCount > 0}">
+                    <h:outputText value="#{zamowienieController.pagination.pageFirstItem + 1}..#{zamowienieController.pagination.pageLastItem + 1}/#{zamowienieController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{zamowienieController.previous}" value="#{bundle.Previous} #{zamowienieController.pagination.pageSize}" rendered="#{zamowienieController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{zamowienieController.next}" value="#{bundle.Next} #{zamowienieController.pagination.pageSize}" rendered="#{zamowienieController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{zamowienieController.items}" id="zamowienia" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListZamowienieTitle_idZamowienia}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idZamowienia}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListZamowienieTitle_liczbaSztuk}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.liczbaSztuk}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListZamowienieTitle_sposobOdbioruZamowienia}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sposobOdbioruZamowienia}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListZamowienieTitle_terminRealizacji}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.terminRealizacji}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListZamowienieTitle_status}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.status}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListZamowienieTitle_idApteki}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idApteki}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListZamowienieTitle_idHurtowni}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idHurtowni}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListZamowienieTitle_idLeku}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idLeku}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{zamowienieController.prepareView}" value="#{bundle.ListZamowienieViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{zamowienieController.prepareEdit}" value="#{bundle.ListZamowienieEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{zamowienieController.destroy}" value="#{bundle.ListZamowienieDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{zamowienieController.prepareCreate}" value="#{bundle.ListZamowienieCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListZamowienieIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

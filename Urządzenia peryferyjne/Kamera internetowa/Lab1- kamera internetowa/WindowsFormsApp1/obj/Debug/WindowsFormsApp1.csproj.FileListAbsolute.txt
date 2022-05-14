@@ -1,0 +1,20 @@
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\lab\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\mateu\Desktop\Urządzenia peryferyjne\Laboratoria\Lab1- kamera internetowa\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

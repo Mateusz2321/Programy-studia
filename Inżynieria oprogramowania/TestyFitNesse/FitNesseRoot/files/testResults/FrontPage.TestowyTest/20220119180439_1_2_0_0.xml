@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20211030</FitNesseVersion>
+  <rootPath>FrontPage.TestowyTest</rootPath>
+  <pageHistoryReference>
+    <name>FrontPage.TestowyTest.DodawaniePokoju</name>
+    <date>2022-01-19T18:04:39+01:00</date>
+    <pageHistoryLink>FrontPage.TestowyTest.DodawaniePokoju?pageHistory&amp;resultDate=20220119180439</pageHistoryLink>
+    <counts>
+      <right>10</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>86</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FrontPage.TestowyTest.DodawaniePokojuDoRezerwacji</name>
+    <date>2022-01-19T18:04:39+01:00</date>
+    <pageHistoryLink>FrontPage.TestowyTest.DodawaniePokojuDoRezerwacji?pageHistory&amp;resultDate=20220119180439</pageHistoryLink>
+    <counts>
+      <right>10</right>
+      <wrong>5</wrong>
+      <ignores>0</ignores>
+      <exceptions>5</exceptions>
+    </counts>
+    <runTimeInMillis>42</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FrontPage.TestowyTest.TestUsuwaniePokoju</name>
+    <date>2022-01-19T18:04:39+01:00</date>
+    <pageHistoryLink>FrontPage.TestowyTest.TestUsuwaniePokoju?pageHistory&amp;resultDate=20220119180439</pageHistoryLink>
+    <counts>
+      <right>11</right>
+      <wrong>5</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>20</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp "D:\Studia\I stopień 5 semestr\Inżynieria oprogramowania\IO_Laby\IO_Lab_Etap_10\TestyFitNesse\Hotel2\build\classes;D:\Studia\I stopień 5 semestr\Inżynieria oprogramowania\IO_Laby\IO_Lab_Etap_10\TestyFitNesse\fitnesse-standalone.jar" fit.FitServer Paweł 57265 3863</command>
+    <exitCode>15</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>2</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1241</totalRunTimeInMillis>
+</suiteResults>
+

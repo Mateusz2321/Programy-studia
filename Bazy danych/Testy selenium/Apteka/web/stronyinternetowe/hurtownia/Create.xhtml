@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateHurtowniaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateHurtowniaLabel_idHurtowni}" for="idHurtowni" />
+                    <h:inputText id="idHurtowni" value="#{hurtowniaController.selected.idHurtowni}" title="#{bundle.CreateHurtowniaTitle_idHurtowni}" required="true" requiredMessage="#{bundle.CreateHurtowniaRequiredMessage_idHurtowni}"/>
+                    <h:outputLabel value="#{bundle.CreateHurtowniaLabel_idDanePlacowki}" for="idDanePlacowki" />
+                    <h:selectOneMenu id="idDanePlacowki" value="#{hurtowniaController.selected.idDanePlacowki}" title="#{bundle.CreateHurtowniaTitle_idDanePlacowki}" required="true" requiredMessage="#{bundle.CreateHurtowniaRequiredMessage_idDanePlacowki}">
+                        <f:selectItems value="#{daneplacowkiController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateHurtowniaLabel_idMagazynu}" for="idMagazynu" />
+                    <h:selectOneMenu id="idMagazynu" value="#{hurtowniaController.selected.idMagazynu}" title="#{bundle.CreateHurtowniaTitle_idMagazynu}" required="true" requiredMessage="#{bundle.CreateHurtowniaRequiredMessage_idMagazynu}">
+                        <f:selectItems value="#{magazynController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{hurtowniaController.create}" value="#{bundle.CreateHurtowniaSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{hurtowniaController.prepareList}" value="#{bundle.CreateHurtowniaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateHurtowniaIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

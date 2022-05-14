@@ -1,0 +1,4 @@
+﻿  Algorytm_genetyczny_tsp_projekt.cpp
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 3\Algorytm_genetyczny_tsp_projekt\Algorytm_genetyczny_tsp_projekt\Algorytm_genetyczny_tsp_projekt.cpp(601,2): warning C4091: "typedef ": zignorowano na lewo od "specimen_data" podczas gdy brak deklaracji zmiennej
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 3\Algorytm_genetyczny_tsp_projekt\Algorytm_genetyczny_tsp_projekt\Algorytm_genetyczny_tsp_projekt.cpp(762,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  Algorytm_genetyczny_tsp_projekt.vcxproj -> C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 3\Algorytm_genetyczny_tsp_projekt\Debug\Algorytm_genetyczny_tsp_projekt.exe

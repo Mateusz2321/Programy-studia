@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="480.0" prefWidth="640.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filebrowserapllication.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane prefHeight="453.0" prefWidth="600.0">
+      <children>
+          <Button fx:id="btn2" layoutX="58.0" layoutY="369.0" onAction="#onHelloButtonClick" text="Show person" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="457.0" AnchorPane.topAnchor="369.0" />
+      
+          <Label fx:id="welcomeText" layoutX="16.0" layoutY="5.0" prefHeight="54.0" prefWidth="246.0" AnchorPane.bottomAnchor="381.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="5.0" />
+         <ListView fx:id="list1" layoutX="14.0" layoutY="114.0" prefHeight="240.0" prefWidth="264.0" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="114.0" />
+         <Button fx:id="btn1" layoutX="51.0" layoutY="74.0" mnemonicParsing="false" onAction="#onChooseFolderButtonClick" prefHeight="26.0" prefWidth="126.0" text="Choose file" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="423.0" AnchorPane.topAnchor="74.0" />
+         <ImageView fx:id="img1" fitHeight="240.0" fitWidth="289.0" layoutX="304.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="304.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="4.0" />
+         <Label layoutX="300.0" layoutY="265.0" text="Name:" />
+         <Label layoutX="300.0" layoutY="305.0" text="Surname: " />
+         <Label layoutX="300.0" layoutY="343.0" text="Age: " />
+         <Label layoutX="300.0" layoutY="382.0" text="Hobby: " />
+         <TextField fx:id="tf1" layoutX="381.0" layoutY="261.0" AnchorPane.bottomAnchor="154.0" AnchorPane.leftAnchor="381.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="261.0" />
+         <TextField fx:id="tf2" layoutX="381.0" layoutY="301.0" AnchorPane.leftAnchor="381.0" AnchorPane.topAnchor="301.0" />
+         <TextField fx:id="tf3" layoutX="381.0" layoutY="348.0" />
+         <TextField fx:id="tf4" layoutX="381.0" layoutY="387.0" />
+      </children>
+   </AnchorPane>
+</VBox>

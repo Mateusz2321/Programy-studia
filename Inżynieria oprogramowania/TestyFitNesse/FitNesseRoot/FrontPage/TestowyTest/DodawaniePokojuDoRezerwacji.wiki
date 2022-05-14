@@ -1,0 +1,11 @@
+---
+Test
+---
+!include DodawaniePokoju
+!|testyfitnessefixture.TestDodawaniePokojuDoRezerwacji|
+|dniRezerwacji	| nrPokoju	| dodajPokojDoRezerwacji?	| liczbaPokoi?	|
+| 14, 18, 19	| 6			| true						| 1				|
+| 15, 35, 50	| 7			| true						| 2				|
+| 15, 62, 76	| 8			| true						| 3				|
+| 13, 27, 29	| 9			| true						| 4				|
+| 26, 30, 37	| 10		| true						| 5				|

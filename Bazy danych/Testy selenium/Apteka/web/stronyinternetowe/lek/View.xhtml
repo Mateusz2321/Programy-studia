@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewLekTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2" id="lek">
+                    <h:outputText value="#{bundle.ViewLekLabel_idLeku}"/>
+                    <h:outputText value="#{lekController.selected.idLeku}" title="#{bundle.ViewLekTitle_idLeku}"/>
+                    <h:outputText value="#{bundle.ViewLekLabel_nazwaLeku}"/>
+                    <h:outputText value="#{lekController.selected.nazwaLeku}" title="#{bundle.ViewLekTitle_nazwaLeku}"/>
+                    <h:outputText value="#{bundle.ViewLekLabel_dataProdukcji}"/>
+                    <h:outputText value="#{lekController.selected.dataProdukcji}" title="#{bundle.ViewLekTitle_dataProdukcji}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewLekLabel_dataWaznosci}"/>
+                    <h:outputText value="#{lekController.selected.dataWaznosci}" title="#{bundle.ViewLekTitle_dataWaznosci}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewLekLabel_sposobPodania}"/>
+                    <h:outputText value="#{lekController.selected.sposobPodania}" title="#{bundle.ViewLekTitle_sposobPodania}"/>
+                    <h:outputText value="#{bundle.ViewLekLabel_postacLeku}"/>
+                    <h:outputText value="#{lekController.selected.postacLeku}" title="#{bundle.ViewLekTitle_postacLeku}"/>
+                    <h:outputText value="#{bundle.ViewLekLabel_waga}"/>
+                    <h:outputText value="#{lekController.selected.waga}" title="#{bundle.ViewLekTitle_waga}"/>
+                    <h:outputText value="#{bundle.ViewLekLabel_cena}"/>
+                    <h:outputText value="#{lekController.selected.cena}" title="#{bundle.ViewLekTitle_cena}"/>
+                    <h:outputText value="#{bundle.ViewLekLabel_producent}"/>
+                    <h:outputText value="#{lekController.selected.producent}" title="#{bundle.ViewLekTitle_producent}"/>
+                    <h:outputText value="#{bundle.ViewLekLabel_liczbaSztukWOpakowaniu}"/>
+                    <h:outputText value="#{lekController.selected.liczbaSztukWOpakowaniu}" title="#{bundle.ViewLekTitle_liczbaSztukWOpakowaniu}"/>
+                    <h:outputText value="#{bundle.ViewLekLabel_zastosowanie}"/>
+                    <h:outputText value="#{lekController.selected.zastosowanie}" title="#{bundle.ViewLekTitle_zastosowanie}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{lekController.destroyAndView}" value="#{bundle.ViewLekDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewLekEditLink}"/>
+                <br />
+                <h:commandLink action="#{lekController.prepareCreate}" value="#{bundle.ViewLekCreateLink}" />
+                <br />
+                <h:commandLink action="#{lekController.prepareList}" value="#{bundle.ViewLekShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewLekIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

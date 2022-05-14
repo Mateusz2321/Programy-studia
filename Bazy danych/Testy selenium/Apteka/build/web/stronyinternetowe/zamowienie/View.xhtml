@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewZamowienieTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2" id="zamowienie">
+                    <h:outputText value="#{bundle.ViewZamowienieLabel_idZamowienia}"/>
+                    <h:outputText value="#{zamowienieController.selected.idZamowienia}" title="#{bundle.ViewZamowienieTitle_idZamowienia}"/>
+                    <h:outputText value="#{bundle.ViewZamowienieLabel_liczbaSztuk}"/>
+                    <h:outputText value="#{zamowienieController.selected.liczbaSztuk}" title="#{bundle.ViewZamowienieTitle_liczbaSztuk}"/>
+                    <h:outputText value="#{bundle.ViewZamowienieLabel_sposobOdbioruZamowienia}"/>
+                    <h:outputText value="#{zamowienieController.selected.sposobOdbioruZamowienia}" title="#{bundle.ViewZamowienieTitle_sposobOdbioruZamowienia}"/>
+                    <h:outputText value="#{bundle.ViewZamowienieLabel_terminRealizacji}"/>
+                    <h:outputText value="#{zamowienieController.selected.terminRealizacji}" title="#{bundle.ViewZamowienieTitle_terminRealizacji}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewZamowienieLabel_status}"/>
+                    <h:outputText value="#{zamowienieController.selected.status}" title="#{bundle.ViewZamowienieTitle_status}"/>
+                    <h:outputText value="#{bundle.ViewZamowienieLabel_idApteki}"/>
+                    <h:outputText value="#{zamowienieController.selected.idApteki}" title="#{bundle.ViewZamowienieTitle_idApteki}"/>
+                    <h:outputText value="#{bundle.ViewZamowienieLabel_idHurtowni}"/>
+                    <h:outputText value="#{zamowienieController.selected.idHurtowni}" title="#{bundle.ViewZamowienieTitle_idHurtowni}"/>
+                    <h:outputText value="#{bundle.ViewZamowienieLabel_idLeku}"/>
+                    <h:outputText value="#{zamowienieController.selected.idLeku}" title="#{bundle.ViewZamowienieTitle_idLeku}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{zamowienieController.destroyAndView}" value="#{bundle.ViewZamowienieDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewZamowienieEditLink}"/>
+                <br />
+                <h:commandLink action="#{zamowienieController.prepareCreate}" value="#{bundle.ViewZamowienieCreateLink}" />
+                <br />
+                <h:commandLink action="#{zamowienieController.prepareList}" value="#{bundle.ViewZamowienieShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewZamowienieIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

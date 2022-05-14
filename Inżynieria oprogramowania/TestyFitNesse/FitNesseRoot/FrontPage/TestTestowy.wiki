@@ -1,0 +1,9 @@
+---
+Suite
+Test: no
+---
+!1 Test suite X
+!contents -R2 -g -p -f -h
+
+"Testy akceptacyjne systemu obslugi hotelu"
+!path D:\Studia\I stopień 5 semestr\Inżynieria oprogramowania\IO_Laby\IO_Lab_Etap_10\TestyFitNesse\Hotel2\build\classes

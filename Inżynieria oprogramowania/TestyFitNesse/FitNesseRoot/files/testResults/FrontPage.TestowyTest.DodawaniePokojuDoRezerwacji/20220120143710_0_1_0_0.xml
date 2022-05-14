@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20211030</FitNesseVersion>
+  <rootPath>FrontPage.TestowyTest.DodawaniePokojuDoRezerwacji</rootPath>
+  <result>
+    <counts>
+      <right>10</right>
+      <wrong>5</wrong>
+      <ignores>0</ignores>
+      <exceptions>5</exceptions>
+    </counts>
+    <date>2022-01-20T14:37:10+01:00</date>
+    <runTimeInMillis>39</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.SetUp"&gt;.FrontPage.SetUp&lt;/a&gt; &lt;a href="FrontPage.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;testyfitnessefixture.SetUp&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.TestowyTest.DodawaniePokoju"&gt;DodawaniePokoju&lt;/a&gt; &lt;a href="FrontPage.TestowyTest.DodawaniePokoju?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="8"&gt;testyfitnessefixture.TestDodawaniePokoju&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;cena&lt;/td&gt;
+		&lt;td&gt;liczbaMiejsc&lt;/td&gt;
+		&lt;td&gt;wyposazenie&lt;/td&gt;
+		&lt;td&gt;dniRezerwacji&lt;/td&gt;
+		&lt;td&gt;nowyNr&lt;/td&gt;
+		&lt;td&gt;dodanieNowego&lt;/td&gt;
+		&lt;td&gt;dodajPokoj?&lt;/td&gt;
+		&lt;td&gt;liczbaPokoi?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;120.00f&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;true,false,false,true,false,true&lt;/td&gt;
+		&lt;td&gt;15,16,17&lt;/td&gt;
+		&lt;td&gt;6&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;250.00f&lt;/td&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td&gt;true,true,true,true,true,true&lt;/td&gt;
+		&lt;td&gt;18,19,20&lt;/td&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;200.00f&lt;/td&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td&gt;false,false,false,false,false,false&lt;/td&gt;
+		&lt;td&gt;21,22,23&lt;/td&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;180.00f&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;true,false,true,false,true,true&lt;/td&gt;
+		&lt;td&gt;24,25,26&lt;/td&gt;
+		&lt;td&gt;9&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;4&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;90.00f&lt;/td&gt;
+		&lt;td&gt;6&lt;/td&gt;
+		&lt;td&gt;false,false,false,false,true,true&lt;/td&gt;
+		&lt;td&gt;27,28,29&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;true&lt;/td&gt;
+		&lt;td class="pass"&gt;5&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4"&gt;testyfitnessefixture.TestDodawaniePokojuDoRezerwacji&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;dniRezerwacji&lt;/td&gt;
+		&lt;td&gt;nrPokoju&lt;/td&gt;
+		&lt;td&gt;dodajPokojDoRezerwacji?&lt;/td&gt;
+		&lt;td&gt;liczbaPokoi?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;14, 18, 19&lt;/td&gt;
+		&lt;td&gt;6&lt;/td&gt;
+		&lt;td class="error"&gt;true&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NullPointerException: Cannot invoke "Pokoje.Model.Pokoj.getDniRezerwacji()" because "pokoj" is null
+	at Pokoje.Model.Rezerwacja.dodajPokoj(Rezerwacja.java:40)
+	at testyfitnessefixture.TestDodawaniePokojuDoRezerwacji.dodajPokojDoRezerwacji(TestDodawaniePokojuDoRezerwacji.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at fit.TypeAdapter.invoke(TypeAdapter.java:108)
+	at fit.TypeAdapter.get(TypeAdapter.java:97)
+	at fit.Fixture$CellComparator.compareCellToResult(Fixture.java:374)
+	at fit.Fixture$CellComparator.access$100(Fixture.java:360)
+	at fit.Fixture.compareCellToResult(Fixture.java:302)
+	at fit.Fixture.check(Fixture.java:298)
+	at fit.ColumnFixture.check(ColumnFixture.java:45)
+	at fit.Binding$QueryBinding.doCell(Binding.java:224)
+	at fit.ColumnFixture.doCell(ColumnFixture.java:32)
+	at fit.Fixture.doCells(Fixture.java:174)
+	at fit.Fixture.doRow(Fixture.java:168)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:21)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretFollowingTables(Fixture.java:121)
+	at fit.Fixture.interpretTables(Fixture.java:107)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td class="fail"&gt;1 &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;0 &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15, 35, 50&lt;/td&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td class="error"&gt;true&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NullPointerException: Cannot invoke "Pokoje.Model.Pokoj.getDniRezerwacji()" because "pokoj" is null
+	at Pokoje.Model.Rezerwacja.dodajPokoj(Rezerwacja.java:40)
+	at testyfitnessefixture.TestDodawaniePokojuDoRezerwacji.dodajPokojDoRezerwacji(TestDodawaniePokojuDoRezerwacji.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at fit.TypeAdapter.invoke(TypeAdapter.java:108)
+	at fit.TypeAdapter.get(TypeAdapter.java:97)
+	at fit.Fixture$CellComparator.compareCellToResult(Fixture.java:374)
+	at fit.Fixture$CellComparator.access$100(Fixture.java:360)
+	at fit.Fixture.compareCellToResult(Fixture.java:302)
+	at fit.Fixture.check(Fixture.java:298)
+	at fit.ColumnFixture.check(ColumnFixture.java:45)
+	at fit.Binding$QueryBinding.doCell(Binding.java:224)
+	at fit.ColumnFixture.doCell(ColumnFixture.java:32)
+	at fit.Fixture.doCells(Fixture.java:174)
+	at fit.Fixture.doRow(Fixture.java:168)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:21)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretFollowingTables(Fixture.java:121)
+	at fit.Fixture.interpretTables(Fixture.java:107)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td class="fail"&gt;2 &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;0 &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;15, 62, 76&lt;/td&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td class="error"&gt;true&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NullPointerException: Cannot invoke "Pokoje.Model.Pokoj.getDniRezerwacji()" because "pokoj" is null
+	at Pokoje.Model.Rezerwacja.dodajPokoj(Rezerwacja.java:40)
+	at testyfitnessefixture.TestDodawaniePokojuDoRezerwacji.dodajPokojDoRezerwacji(TestDodawaniePokojuDoRezerwacji.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at fit.TypeAdapter.invoke(TypeAdapter.java:108)
+	at fit.TypeAdapter.get(TypeAdapter.java:97)
+	at fit.Fixture$CellComparator.compareCellToResult(Fixture.java:374)
+	at fit.Fixture$CellComparator.access$100(Fixture.java:360)
+	at fit.Fixture.compareCellToResult(Fixture.java:302)
+	at fit.Fixture.check(Fixture.java:298)
+	at fit.ColumnFixture.check(ColumnFixture.java:45)
+	at fit.Binding$QueryBinding.doCell(Binding.java:224)
+	at fit.ColumnFixture.doCell(ColumnFixture.java:32)
+	at fit.Fixture.doCells(Fixture.java:174)
+	at fit.Fixture.doRow(Fixture.java:168)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:21)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretFollowingTables(Fixture.java:121)
+	at fit.Fixture.interpretTables(Fixture.java:107)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td class="fail"&gt;3 &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;0 &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;13, 27, 29&lt;/td&gt;
+		&lt;td&gt;9&lt;/td&gt;
+		&lt;td class="error"&gt;true&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NullPointerException: Cannot invoke "Pokoje.Model.Pokoj.getDniRezerwacji()" because "pokoj" is null
+	at Pokoje.Model.Rezerwacja.dodajPokoj(Rezerwacja.java:40)
+	at testyfitnessefixture.TestDodawaniePokojuDoRezerwacji.dodajPokojDoRezerwacji(TestDodawaniePokojuDoRezerwacji.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at fit.TypeAdapter.invoke(TypeAdapter.java:108)
+	at fit.TypeAdapter.get(TypeAdapter.java:97)
+	at fit.Fixture$CellComparator.compareCellToResult(Fixture.java:374)
+	at fit.Fixture$CellComparator.access$100(Fixture.java:360)
+	at fit.Fixture.compareCellToResult(Fixture.java:302)
+	at fit.Fixture.check(Fixture.java:298)
+	at fit.ColumnFixture.check(ColumnFixture.java:45)
+	at fit.Binding$QueryBinding.doCell(Binding.java:224)
+	at fit.ColumnFixture.doCell(ColumnFixture.java:32)
+	at fit.Fixture.doCells(Fixture.java:174)
+	at fit.Fixture.doRow(Fixture.java:168)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:21)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretFollowingTables(Fixture.java:121)
+	at fit.Fixture.interpretTables(Fixture.java:107)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td class="fail"&gt;4 &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;0 &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;26, 30, 37&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td class="error"&gt;true&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NullPointerException: Cannot invoke "Pokoje.Model.Pokoj.getDniRezerwacji()" because "pokoj" is null
+	at Pokoje.Model.Rezerwacja.dodajPokoj(Rezerwacja.java:40)
+	at testyfitnessefixture.TestDodawaniePokojuDoRezerwacji.dodajPokojDoRezerwacji(TestDodawaniePokojuDoRezerwacji.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at fit.TypeAdapter.invoke(TypeAdapter.java:108)
+	at fit.TypeAdapter.get(TypeAdapter.java:97)
+	at fit.Fixture$CellComparator.compareCellToResult(Fixture.java:374)
+	at fit.Fixture$CellComparator.access$100(Fixture.java:360)
+	at fit.Fixture.compareCellToResult(Fixture.java:302)
+	at fit.Fixture.check(Fixture.java:298)
+	at fit.ColumnFixture.check(ColumnFixture.java:45)
+	at fit.Binding$QueryBinding.doCell(Binding.java:224)
+	at fit.ColumnFixture.doCell(ColumnFixture.java:32)
+	at fit.Fixture.doCells(Fixture.java:174)
+	at fit.Fixture.doRow(Fixture.java:168)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:21)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretFollowingTables(Fixture.java:121)
+	at fit.Fixture.interpretTables(Fixture.java:107)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td class="fail"&gt;5 &lt;span class="fit_label"&gt;expected&lt;/span&gt;&lt;hr&gt;0 &lt;span class="fit_label"&gt;actual&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>DodawaniePokojuDoRezerwacji</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp "C:\Users\mateu\Desktop\Inżynieria oprogramowania\TestyFitNesse_19_01\TestyFitNesse\Hotel2\build\classes;C:\Users\mateu\Desktop\Inżynieria oprogramowania\TestyFitNesse_19_01\TestyFitNesse\fitnesse-standalone.jar" fit.FitServer LAPTOP-KO536NNG 50655 3863</command>
+    <exitCode>10</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>462</totalRunTimeInMillis>
+</testResults>
+

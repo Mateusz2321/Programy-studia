@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateLekiwmagazynachTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateLekiwmagazynachLabel_nrWiersza}" for="nrWiersza" />
+                    <h:inputText id="nrWiersza" value="#{lekiwmagazynachController.selected.nrWiersza}" title="#{bundle.CreateLekiwmagazynachTitle_nrWiersza}" required="true" requiredMessage="#{bundle.CreateLekiwmagazynachRequiredMessage_nrWiersza}"/>
+                    <h:outputLabel value="#{bundle.CreateLekiwmagazynachLabel_ilosc}" for="ilosc" />
+                    <h:inputText id="ilosc" value="#{lekiwmagazynachController.selected.ilosc}" title="#{bundle.CreateLekiwmagazynachTitle_ilosc}" required="true" requiredMessage="#{bundle.CreateLekiwmagazynachRequiredMessage_ilosc}"/>
+                    <h:outputLabel value="#{bundle.CreateLekiwmagazynachLabel_idLeku}" for="idLeku" />
+                    <h:selectOneMenu id="idLeku" value="#{lekiwmagazynachController.selected.idLeku}" title="#{bundle.CreateLekiwmagazynachTitle_idLeku}" required="true" requiredMessage="#{bundle.CreateLekiwmagazynachRequiredMessage_idLeku}">
+                        <f:selectItems value="#{lekController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateLekiwmagazynachLabel_idMagazynu}" for="idMagazynu" />
+                    <h:selectOneMenu id="idMagazynu" value="#{lekiwmagazynachController.selected.idMagazynu}" title="#{bundle.CreateLekiwmagazynachTitle_idMagazynu}" required="true" requiredMessage="#{bundle.CreateLekiwmagazynachRequiredMessage_idMagazynu}">
+                        <f:selectItems value="#{magazynController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{lekiwmagazynachController.create}" value="#{bundle.CreateLekiwmagazynachSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{lekiwmagazynachController.prepareList}" value="#{bundle.CreateLekiwmagazynachShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateLekiwmagazynachIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

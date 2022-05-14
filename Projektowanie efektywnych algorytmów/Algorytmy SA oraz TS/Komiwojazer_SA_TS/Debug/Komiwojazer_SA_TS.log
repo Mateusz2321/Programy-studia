@@ -1,0 +1,10 @@
+﻿  Komiwojazer_SA_TS.cpp
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 2\Komiwojazer_SA_TS\Komiwojazer_SA_TS\Komiwojazer_SA_TS.cpp(42,2): warning C4091: "typedef ": zignorowano na lewo od "tabu_element" podczas gdy brak deklaracji zmiennej
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 2\Komiwojazer_SA_TS\Komiwojazer_SA_TS\Komiwojazer_SA_TS.cpp(90,9): warning C4101: "temp_double": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 2\Komiwojazer_SA_TS\Komiwojazer_SA_TS\Komiwojazer_SA_TS.cpp(187,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 2\Komiwojazer_SA_TS\Komiwojazer_SA_TS\Komiwojazer_SA_TS.cpp(356,13): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 2\Komiwojazer_SA_TS\Komiwojazer_SA_TS\Komiwojazer_SA_TS.cpp(362,13): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 2\Komiwojazer_SA_TS\Komiwojazer_SA_TS\Komiwojazer_SA_TS.cpp(371,13): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 2\Komiwojazer_SA_TS\Komiwojazer_SA_TS\Komiwojazer_SA_TS.cpp(387,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 2\Komiwojazer_SA_TS\Komiwojazer_SA_TS\Komiwojazer_SA_TS.cpp(418,52): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
+  Komiwojazer_SA_TS.vcxproj -> C:\Users\mateu\Desktop\Projektowanie efektywnych algorytmów\Projekt\Etap 2\Komiwojazer_SA_TS\Debug\Komiwojazer_SA_TS.exe

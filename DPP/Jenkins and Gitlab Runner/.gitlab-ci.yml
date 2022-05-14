@@ -1,0 +1,64 @@
+variables:
+  GIT_SSL_NO_VERIFY: "true"
+  MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
+  
+image: maven:latest
+
+
+stages:
+  - build
+  - test
+  - package
+  - deploy
+
+# This is the name of the job.
+# You can choose it freely.
+#maven_build:
+  # A job is always executed within a stage.
+  # If no stage is set, it defaults to 'test'.
+ # stage: test
+  # Since we require Maven for this job,
+  # we can restrict the job to runners with a certain tag.
+  # Of course, it is our duty to actually configure a runner
+  # with the tag 'maven' and a working maven installation
+ # tags:
+#    - maven
+  # Here you can execute arbitrate terminal commands.
+  # If any of the commands returns a non zero exit code the job fails.
+#  script:
+ #   - echo "Building project with maven"
+#   - mvn verify
+cache:
+  paths:
+    - .m2/repository
+    - target
+
+
+build:
+    stage: build
+    script:
+        - echo "Building"
+        - "mvn -B -DskipTests clean package"
+
+test:
+    stage: test
+    script:
+        - echo "Testing"
+        - "mvn test"
+
+package:
+    stage: package
+    script:
+        - echo "Packaging"
+        - "mvn package"
+
+deploy:
+    stage: deploy
+    script:
+        - echo "Deploying"
+        - "mvn deploy"
+            
+
+
+
+        

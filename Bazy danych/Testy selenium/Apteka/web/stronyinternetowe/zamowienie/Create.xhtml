@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateZamowienieTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateZamowienieLabel_idZamowienia}" for="idZamowienia" />
+                    <h:inputText id="idZamowienia" value="#{zamowienieController.selected.idZamowienia}" title="#{bundle.CreateZamowienieTitle_idZamowienia}" required="true" requiredMessage="#{bundle.CreateZamowienieRequiredMessage_idZamowienia}"/>
+                    <h:outputLabel value="#{bundle.CreateZamowienieLabel_liczbaSztuk}" for="liczbaSztuk" />
+                    <h:inputText id="liczbaSztuk" value="#{zamowienieController.selected.liczbaSztuk}" title="#{bundle.CreateZamowienieTitle_liczbaSztuk}" required="true" requiredMessage="#{bundle.CreateZamowienieRequiredMessage_liczbaSztuk}"/>
+                    <h:outputLabel value="#{bundle.CreateZamowienieLabel_sposobOdbioruZamowienia}" for="sposobOdbioruZamowienia" />
+                    <h:inputText id="sposobOdbioruZamowienia" value="#{zamowienieController.selected.sposobOdbioruZamowienia}" title="#{bundle.CreateZamowienieTitle_sposobOdbioruZamowienia}" required="true" requiredMessage="#{bundle.CreateZamowienieRequiredMessage_sposobOdbioruZamowienia}"/>
+                    <h:outputLabel value="#{bundle.CreateZamowienieLabel_terminRealizacji}" for="terminRealizacji" />
+                    <h:inputText id="terminRealizacji" value="#{zamowienieController.selected.terminRealizacji}" title="#{bundle.CreateZamowienieTitle_terminRealizacji}" required="true" requiredMessage="#{bundle.CreateZamowienieRequiredMessage_terminRealizacji}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateZamowienieLabel_status}" for="status" />
+                    <h:inputText id="status" value="#{zamowienieController.selected.status}" title="#{bundle.CreateZamowienieTitle_status}" required="true" requiredMessage="#{bundle.CreateZamowienieRequiredMessage_status}"/>
+                    <h:outputLabel value="#{bundle.CreateZamowienieLabel_idApteki}" for="idApteki" />
+                    <h:selectOneMenu id="idApteki" value="#{zamowienieController.selected.idApteki}" title="#{bundle.CreateZamowienieTitle_idApteki}" required="true" requiredMessage="#{bundle.CreateZamowienieRequiredMessage_idApteki}">
+                        <f:selectItems value="#{aptekaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateZamowienieLabel_idHurtowni}" for="idHurtowni" />
+                    <h:selectOneMenu id="idHurtowni" value="#{zamowienieController.selected.idHurtowni}" title="#{bundle.CreateZamowienieTitle_idHurtowni}" required="true" requiredMessage="#{bundle.CreateZamowienieRequiredMessage_idHurtowni}">
+                        <f:selectItems value="#{hurtowniaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateZamowienieLabel_idLeku}" for="idLeku" />
+                    <h:selectOneMenu id="idLeku" value="#{zamowienieController.selected.idLeku}" title="#{bundle.CreateZamowienieTitle_idLeku}" required="true" requiredMessage="#{bundle.CreateZamowienieRequiredMessage_idLeku}">
+                        <f:selectItems value="#{lekController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{zamowienieController.create}" value="#{bundle.CreateZamowienieSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{zamowienieController.prepareList}" value="#{bundle.CreateZamowienieShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateZamowienieIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

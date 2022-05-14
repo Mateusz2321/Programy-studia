@@ -1,0 +1,9 @@
+|FrontPage.TestowyTest.DodawaniePokojuDoRezerwacji||14:44:25 czw., sty 20, 2022|
+|FrontPage.TestowyTest||14:36:55 czw., sty 20, 2022|
+|FrontPage.TestowyTest.ZnajdowaniePokoju||18:07:18 Śr, sty 19, 2022|
+|FrontPage.TestowyTest.TestUsuwaniePokoju||17:39:42 Śr, sty 19, 2022|
+|FrontPage.TestowyTest.DodawaniePokoju||17:16:34 Śr, sty 19, 2022|
+|FrontPage||16:30:15 Śr, sty 19, 2022|
+|SetUp||16:29:31 Śr, sty 19, 2022|
+|FrontPage.SetUp||16:27:44 Śr, sty 19, 2022|
+|FrontPage.TestTestowy||16:11:14 Śr, sty 19, 2022|

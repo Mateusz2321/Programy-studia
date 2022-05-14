@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListLekTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListLekEmpty}" rendered="#{lekController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{lekController.items.rowCount > 0}">
+                    <h:outputText value="#{lekController.pagination.pageFirstItem + 1}..#{lekController.pagination.pageLastItem + 1}/#{lekController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{lekController.previous}" value="#{bundle.Previous} #{lekController.pagination.pageSize}" rendered="#{lekController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{lekController.next}" value="#{bundle.Next} #{lekController.pagination.pageSize}" rendered="#{lekController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{lekController.items}" id="leki" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_idLeku}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idLeku}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_nazwaLeku}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nazwaLeku}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_dataProdukcji}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dataProdukcji}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_dataWaznosci}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dataWaznosci}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_sposobPodania}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sposobPodania}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_postacLeku}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.postacLeku}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_waga}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.waga}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_cena}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cena}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_producent}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.producent}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_liczbaSztukWOpakowaniu}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.liczbaSztukWOpakowaniu}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLekTitle_zastosowanie}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.zastosowanie}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{lekController.prepareView}" value="#{bundle.ListLekViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{lekController.prepareEdit}" value="#{bundle.ListLekEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{lekController.destroy}" value="#{bundle.ListLekDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{lekController.prepareCreate}" value="#{bundle.ListLekCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListLekIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

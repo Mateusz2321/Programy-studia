@@ -1,0 +1,12 @@
+---
+Suite
+Test: no
+---
+!1 Test suite X
+!contents -R2 -g -p -f -h
+Contents:
+
+|SetUp|
+
+"Testy akceptacyjne systemu obslugi hotelu"
+!path C:\Users\mateu\Desktop\Inżynieria oprogramowania\TestyFitNesse_19_01\TestyFitNesse\Hotel2\build\classes

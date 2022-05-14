@@ -1,0 +1,27 @@
+﻿  ProjektUkladuSlonecznego.cpp
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(22,2): warning C4091: "typedef ": zignorowano na lewo od "Planet" podczas gdy brak deklaracji zmiennej
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(34,2): warning C4091: "typedef ": zignorowano na lewo od "Sun" podczas gdy brak deklaracji zmiennej
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(253,29): warning C4018: "<=": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(254,30): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(293,37): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(294,30): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(252,10): warning C4101: "j1": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(252,6): warning C4101: "i1": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(339,29): warning C4018: "<=": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(340,30): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(377,37): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(378,30): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(338,10): warning C4101: "j1": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(338,6): warning C4101: "i1": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(422,29): warning C4018: "<=": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(423,30): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(461,37): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(462,30): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(421,10): warning C4101: "j1": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego\ProjektUkladuSlonecznego.cpp(421,6): warning C4101: "i1": lokalna zmienna, do której nie istnieje odwołanie
+  Trwa generowanie kodu
+  1 of 103 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Zakończono generowanie kodu
+  ProjektUkladuSlonecznego.vcxproj -> C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Mini Projekt\ProjektUkladuSlonecznego\Release\ProjektUkladuSlonecznego.exe

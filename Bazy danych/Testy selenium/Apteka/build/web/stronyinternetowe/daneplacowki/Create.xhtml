@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateDaneplacowkiTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateDaneplacowkiLabel_idDanePlacowki}" for="idDanePlacowki" />
+                    <h:inputText id="idDanePlacowki" value="#{daneplacowkiController.selected.idDanePlacowki}" title="#{bundle.CreateDaneplacowkiTitle_idDanePlacowki}" required="true" requiredMessage="#{bundle.CreateDaneplacowkiRequiredMessage_idDanePlacowki}"/>
+                    <h:outputLabel value="#{bundle.CreateDaneplacowkiLabel_nazwa}" for="nazwa" />
+                    <h:inputText id="nazwa" value="#{daneplacowkiController.selected.nazwa}" title="#{bundle.CreateDaneplacowkiTitle_nazwa}" required="true" requiredMessage="#{bundle.CreateDaneplacowkiRequiredMessage_nazwa}"/>
+                    <h:outputLabel value="#{bundle.CreateDaneplacowkiLabel_kraj}" for="kraj" />
+                    <h:inputText id="kraj" value="#{daneplacowkiController.selected.kraj}" title="#{bundle.CreateDaneplacowkiTitle_kraj}" required="true" requiredMessage="#{bundle.CreateDaneplacowkiRequiredMessage_kraj}"/>
+                    <h:outputLabel value="#{bundle.CreateDaneplacowkiLabel_miasto}" for="miasto" />
+                    <h:inputText id="miasto" value="#{daneplacowkiController.selected.miasto}" title="#{bundle.CreateDaneplacowkiTitle_miasto}" required="true" requiredMessage="#{bundle.CreateDaneplacowkiRequiredMessage_miasto}"/>
+                    <h:outputLabel value="#{bundle.CreateDaneplacowkiLabel_ulica}" for="ulica" />
+                    <h:inputText id="ulica" value="#{daneplacowkiController.selected.ulica}" title="#{bundle.CreateDaneplacowkiTitle_ulica}" required="true" requiredMessage="#{bundle.CreateDaneplacowkiRequiredMessage_ulica}"/>
+                    <h:outputLabel value="#{bundle.CreateDaneplacowkiLabel_nr}" for="nr" />
+                    <h:inputText id="nr" value="#{daneplacowkiController.selected.nr}" title="#{bundle.CreateDaneplacowkiTitle_nr}" required="true" requiredMessage="#{bundle.CreateDaneplacowkiRequiredMessage_nr}"/>
+                    <h:outputLabel value="#{bundle.CreateDaneplacowkiLabel_kodPocztowy}" for="kodPocztowy" />
+                    <h:inputText id="kodPocztowy" value="#{daneplacowkiController.selected.kodPocztowy}" title="#{bundle.CreateDaneplacowkiTitle_kodPocztowy}" required="true" requiredMessage="#{bundle.CreateDaneplacowkiRequiredMessage_kodPocztowy}"/>
+                    <h:outputLabel value="#{bundle.CreateDaneplacowkiLabel_nrKontaktowy}" for="nrKontaktowy" />
+                    <h:inputText id="nrKontaktowy" value="#{daneplacowkiController.selected.nrKontaktowy}" title="#{bundle.CreateDaneplacowkiTitle_nrKontaktowy}" />
+                    <h:outputLabel value="#{bundle.CreateDaneplacowkiLabel_email}" for="email" />
+                    <h:inputText id="email" value="#{daneplacowkiController.selected.email}" title="#{bundle.CreateDaneplacowkiTitle_email}" required="true" requiredMessage="#{bundle.CreateDaneplacowkiRequiredMessage_email}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{daneplacowkiController.create}" value="#{bundle.CreateDaneplacowkiSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{daneplacowkiController.prepareList}" value="#{bundle.CreateDaneplacowkiShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateDaneplacowkiIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewDaneplacowkiTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2" id="daneplacowki">
+                    <h:outputText value="#{bundle.ViewDaneplacowkiLabel_idDanePlacowki}"/>
+                    <h:outputText value="#{daneplacowkiController.selected.idDanePlacowki}" title="#{bundle.ViewDaneplacowkiTitle_idDanePlacowki}"/>
+                    <h:outputText value="#{bundle.ViewDaneplacowkiLabel_nazwa}"/>
+                    <h:outputText value="#{daneplacowkiController.selected.nazwa}" title="#{bundle.ViewDaneplacowkiTitle_nazwa}"/>
+                    <h:outputText value="#{bundle.ViewDaneplacowkiLabel_kraj}"/>
+                    <h:outputText value="#{daneplacowkiController.selected.kraj}" title="#{bundle.ViewDaneplacowkiTitle_kraj}"/>
+                    <h:outputText value="#{bundle.ViewDaneplacowkiLabel_miasto}"/>
+                    <h:outputText value="#{daneplacowkiController.selected.miasto}" title="#{bundle.ViewDaneplacowkiTitle_miasto}"/>
+                    <h:outputText value="#{bundle.ViewDaneplacowkiLabel_ulica}"/>
+                    <h:outputText value="#{daneplacowkiController.selected.ulica}" title="#{bundle.ViewDaneplacowkiTitle_ulica}"/>
+                    <h:outputText value="#{bundle.ViewDaneplacowkiLabel_nr}"/>
+                    <h:outputText value="#{daneplacowkiController.selected.nr}" title="#{bundle.ViewDaneplacowkiTitle_nr}"/>
+                    <h:outputText value="#{bundle.ViewDaneplacowkiLabel_kodPocztowy}"/>
+                    <h:outputText value="#{daneplacowkiController.selected.kodPocztowy}" title="#{bundle.ViewDaneplacowkiTitle_kodPocztowy}"/>
+                    <h:outputText value="#{bundle.ViewDaneplacowkiLabel_nrKontaktowy}"/>
+                    <h:outputText value="#{daneplacowkiController.selected.nrKontaktowy}" title="#{bundle.ViewDaneplacowkiTitle_nrKontaktowy}"/>
+                    <h:outputText value="#{bundle.ViewDaneplacowkiLabel_email}"/>
+                    <h:outputText value="#{daneplacowkiController.selected.email}" title="#{bundle.ViewDaneplacowkiTitle_email}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{daneplacowkiController.destroyAndView}" value="#{bundle.ViewDaneplacowkiDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewDaneplacowkiEditLink}"/>
+                <br />
+                <h:commandLink action="#{daneplacowkiController.prepareCreate}" value="#{bundle.ViewDaneplacowkiCreateLink}" />
+                <br />
+                <h:commandLink action="#{daneplacowkiController.prepareList}" value="#{bundle.ViewDaneplacowkiShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewDaneplacowkiIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

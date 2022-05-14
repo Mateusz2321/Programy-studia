@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditLekTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditLekLabel_idLeku}" for="idLeku" />
+                    <h:inputText id="idLeku" value="#{lekController.selected.idLeku}" title="#{bundle.EditLekTitle_idLeku}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_idLeku}"/>
+                    <h:outputLabel value="#{bundle.EditLekLabel_nazwaLeku}" for="nazwaLeku" />
+                    <h:inputText id="nazwaLeku" value="#{lekController.selected.nazwaLeku}" title="#{bundle.EditLekTitle_nazwaLeku}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_nazwaLeku}"/>
+                    <h:outputLabel value="#{bundle.EditLekLabel_dataProdukcji}" for="dataProdukcji" />
+                    <h:inputText id="dataProdukcji" value="#{lekController.selected.dataProdukcji}" title="#{bundle.EditLekTitle_dataProdukcji}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_dataProdukcji}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditLekLabel_dataWaznosci}" for="dataWaznosci" />
+                    <h:inputText id="dataWaznosci" value="#{lekController.selected.dataWaznosci}" title="#{bundle.EditLekTitle_dataWaznosci}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_dataWaznosci}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditLekLabel_sposobPodania}" for="sposobPodania" />
+                    <h:inputText id="sposobPodania" value="#{lekController.selected.sposobPodania}" title="#{bundle.EditLekTitle_sposobPodania}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_sposobPodania}"/>
+                    <h:outputLabel value="#{bundle.EditLekLabel_postacLeku}" for="postacLeku" />
+                    <h:inputText id="postacLeku" value="#{lekController.selected.postacLeku}" title="#{bundle.EditLekTitle_postacLeku}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_postacLeku}"/>
+                    <h:outputLabel value="#{bundle.EditLekLabel_waga}" for="waga" />
+                    <h:inputText id="waga" value="#{lekController.selected.waga}" title="#{bundle.EditLekTitle_waga}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_waga}"/>
+                    <h:outputLabel value="#{bundle.EditLekLabel_cena}" for="cena" />
+                    <h:inputText id="cena" value="#{lekController.selected.cena}" title="#{bundle.EditLekTitle_cena}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_cena}"/>
+                    <h:outputLabel value="#{bundle.EditLekLabel_producent}" for="producent" />
+                    <h:inputText id="producent" value="#{lekController.selected.producent}" title="#{bundle.EditLekTitle_producent}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_producent}"/>
+                    <h:outputLabel value="#{bundle.EditLekLabel_liczbaSztukWOpakowaniu}" for="liczbaSztukWOpakowaniu" />
+                    <h:inputText id="liczbaSztukWOpakowaniu" value="#{lekController.selected.liczbaSztukWOpakowaniu}" title="#{bundle.EditLekTitle_liczbaSztukWOpakowaniu}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_liczbaSztukWOpakowaniu}"/>
+                    <h:outputLabel value="#{bundle.EditLekLabel_zastosowanie}" for="zastosowanie" />
+                    <h:inputText id="zastosowanie" value="#{lekController.selected.zastosowanie}" title="#{bundle.EditLekTitle_zastosowanie}" required="true" requiredMessage="#{bundle.EditLekRequiredMessage_zastosowanie}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{lekController.update}" value="#{bundle.EditLekSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditLekViewLink}"/>
+                <br />
+                <h:commandLink action="#{lekController.prepareList}" value="#{bundle.EditLekShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditLekIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

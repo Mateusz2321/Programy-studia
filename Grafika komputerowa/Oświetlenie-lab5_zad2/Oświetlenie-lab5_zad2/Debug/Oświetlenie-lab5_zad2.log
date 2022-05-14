@@ -1,0 +1,11 @@
+﻿  Oświetlenie-lab5_zad2.cpp
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(58,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(153,14): error C2065: "theta": niezadeklarowany identyfikator
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(154,14): error C2065: "theta": niezadeklarowany identyfikator
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(155,14): error C2065: "theta": niezadeklarowany identyfikator
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(224,3): error C2065: "light_position2": niezadeklarowany identyfikator
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(225,3): error C2065: "light_position2": niezadeklarowany identyfikator
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(226,3): error C2065: "light_position2": niezadeklarowany identyfikator
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(227,37): error C2065: "light_position2": niezadeklarowany identyfikator
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(405,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2\Oświetlenie-lab5_zad2.cpp(415,17): warning C4326: zwracany typ "main" powinien być "int" zamiast "void"

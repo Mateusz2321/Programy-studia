@@ -1,0 +1,6 @@
+!include DodawaniePokoju
+!|testyfitnessefixture.TestUsuwaniePokoju|
+| nrPokoju	| usunPokoj?	| liczbaPokoi?	|
+| 6			| true			| 4				|
+| 7			| true			| 3				|
+| 7			| false			| 3				|

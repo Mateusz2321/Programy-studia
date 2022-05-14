@@ -1,0 +1,14 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: Katalog pośredni (Debug\) zawiera pliki udostępnione z innego projektu (Tekssturowanie-lab6_zad2.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
+  Teksturowanie-lab6_zad2.cpp
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(54,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(59,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(62,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(64,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(69,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(70,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(628,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(634,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(635,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(639,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Tekssturowanie-lab6_zad2\Teksturowanie-lab6_zad2.cpp(647,17): warning C4326: zwracany typ "main" powinien być "int" zamiast "void"
+  Tekssturowanie-lab6_zad2.vcxproj -> C:\Users\mateu\Desktop\Grafika komputerowa i komunikacja człowiek-komputer\Tekssturowanie-lab6_zad2\Debug\Teksturowanie-lab6_zad2.exe
