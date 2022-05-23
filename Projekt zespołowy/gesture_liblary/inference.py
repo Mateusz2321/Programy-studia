@@ -1,7 +1,4 @@
 
-
-
-
 from keras.models import Model,Sequential,load_model
 from keras.utils.vis_utils import plot_model
 import pandas as pd
@@ -32,7 +29,6 @@ cm = confusion_matrix(y_true,y_pred)
 ax= plt.subplot()
 sns.heatmap(cm, annot=True, ax = ax, xticklabels=True, yticklabels=True); #annot=True to annotate cells
 
-# labels, title and ticks
 ax.set_xlabel('Predicted labels');ax.set_ylabel('True labels')
 ax.set_title('Confusion Matrix')
 ax.xaxis.set_ticklabels(list(valid)[1:]); ax.yaxis.set_ticklabels(list(valid)[1:],rotation =0)

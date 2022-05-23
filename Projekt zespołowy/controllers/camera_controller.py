@@ -7,22 +7,37 @@ class CameraController():
         self.win=win
         self.camera_checker = CameraChecker()
         self.camera_list = self.camera_checker.list_ports()
-        self.used_camera_number=self.camera_list[0]
-        self.cap=cv2.VideoCapture(self.used_camera_number)
+        if len(self.camera_list) > 0:
+            self.used_camera_number=self.camera_list[0]
+            self.cap = cv2.VideoCapture(self.used_camera_number)
+        else:
+            self.used_camera_number = -1
+            self.cap = None
         self.mutex = Lock()
-
+    def release_camera(self):
+        self.mutex.acquire()
+        if self.used_camera_number > -1:
+            self.used_camera_number = -1
+            self.cap.release()
+            self.cap = None
+        self.mutex.release()
     def get_used_camera_number(self):
         return self.used_camera_number
-    #Klasy camera oraz mouse_steering powinny obraz z kamery pobierać przy pomocy tej funkcji
+
     def get_camera_image(self):
         self.mutex.acquire()
-        ret, frame = self.cap.read()
-        print(str(ret))
+        if self.used_camera_number > -1:
+            ret, frame = self.cap.read()
+        else:
+            ret, frame = False, False
         self.mutex.release()
         if ret is False:
             self.set_used_camera_number(0)
             self.mutex.acquire()
-            ret, frame = self.cap.read()
+            if self.used_camera_number > -1:
+                ret, frame = self.cap.read()
+            else:
+                ret, frame = False, False
             self.mutex.release()
         return ret,frame
     def get_all_cameras(self):
@@ -41,9 +56,20 @@ class CameraController():
             self.cap.release()
             self.cap = cv2.VideoCapture(self.used_camera_number)
         self.mutex.release()
+    def refresh_camera_list(self):
+        self.mutex.acquire()
+        self.camera_list = self.camera_checker.list_ports()
+        if len(self.camera_list) > 0:
+            self.used_camera_number = self.camera_list[0]
+            self.cap = cv2.VideoCapture(self.used_camera_number)
+        else:
+            self.used_camera_number = -1
+            self.cap = None
+        self.win.set_cameras_combo_box(self.camera_list)
 
+        self.mutex.release()
 if __name__ == '__main__':
     ap=CameraController()
-    print(ap.camera_list)
+
 
 

@@ -1,19 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[7]:
-
-
-#from keras.utils import Sequence
-#import cv2
 import glob,cv2
 from keras.callbacks import Callback
 import numpy as np
 
 import matplotlib.pyplot as plt
-
-# In[5]:
-
 
 class FlowRgbGenerator(object):
     
@@ -27,19 +17,16 @@ class FlowRgbGenerator(object):
 
     def __getitem__(self, cur_batch):
         batch =self.df[cur_batch*self.batch_size : (cur_batch+1)*self.batch_size]
-          
-          
+
         batch_inputrgb = []
         batch_inputflow = []
         batch_output = [] 
-          
-          
+
         for index,row in batch.iterrows():
             inpflow = get_middle_part_flow(self.base_path + str(row['videoid']) )
             inprgb = get_middle_part_rgb(self.base_path + str(row['videoid']) )
             out = row[1:].values
-            
-              
+
             batch_inputflow.append(inpflow)
             batch_inputrgb.append(inprgb)
             batch_output.append( out )
@@ -48,10 +35,6 @@ class FlowRgbGenerator(object):
         batch_rgbx = np.array( batch_inputrgb )
         batch_y = np.array( batch_output )
         return  [batch_flowx,batch_rgbx], batch_y 
-
-
-# In[ ]:
-
 
 class FlowGenerator(object):
     
@@ -65,12 +48,10 @@ class FlowGenerator(object):
 
     def __getitem__(self, cur_batch):
         batch =self.df[cur_batch*self.batch_size : (cur_batch+1)*self.batch_size]
-          
-          
+
         batch_inputflow = []
         batch_output = [] 
-          
-          
+
         for index,row in batch.iterrows():
             inpflow = get_middle_part_flow(self.base_path + str(row['videoid']) )
             out = row[1:].values
@@ -80,13 +61,8 @@ class FlowGenerator(object):
 
         batch_flowx = np.array(batch_inputflow)
         batch_y = np.array( batch_output )
-          
 
         return  batch_flowx, batch_y 
-
-
-# In[ ]:
-
 
 class RgbGenerator(object):
     
@@ -100,29 +76,21 @@ class RgbGenerator(object):
 
     def __getitem__(self, cur_batch):
         batch =self.df[cur_batch*self.batch_size : (cur_batch+1)*self.batch_size]
-          
-          
+
         batch_inputrgb = []
-        batch_output = [] 
-          
-          
+        batch_output = []
+
         for index,row in batch.iterrows():
             inprgb = get_middle_part_rgb(self.base_path + str(row['videoid']) )
             out = row[1:].values
-            
-              
+
             batch_inputrgb.append(inprgb)
             batch_output.append(out)
 
         batch_rgbx = np.array( batch_inputrgb )
         batch_y = np.array( batch_output )
-          
 
         return  batch_rgbx, batch_y 
-
-
-# In[3]:
-
 
 def read_flow(path):
     with open(path,'rb') as f :
@@ -143,10 +111,6 @@ def read_flow(path):
 
         return np.moveaxis(xy,0,-1)
 
-
-# In[6]:
-
-
 def get_middle_part_flow(input_path ):
     flows = sorted(glob.glob(input_path+'/flows/*'))
   
@@ -157,10 +121,6 @@ def get_middle_part_flow(input_path ):
     data=np.array(ims)
     #print('data shape ' ,data.shape)
     return data
-
-
-# In[ ]:
-
 
 def get_middle_part_rgb(input_path ):
     images = sorted(glob.glob(input_path+'/*.jpg'))
@@ -174,10 +134,6 @@ def get_middle_part_rgb(input_path ):
     data = data/255.
   
     return data
-  
-
-
-# In[ ]:
 
 class PlotLearning(Callback):
     def __init__(self):
@@ -188,7 +144,6 @@ class PlotLearning(Callback):
         self.fig = plt.figure()
         self.logs = []
 
-
     def on_epoch_end(self, epoch, logs={}):
         
         self.logs.append(logs)
@@ -198,8 +153,7 @@ class PlotLearning(Callback):
         self.val_acc.append(logs.get('val_acc'))
         self.i += 1
         
-        self.clear_output(wait=True)    #dodane self.
-        
+        self.clear_output(wait=True)
 
         plt.plot(self.x, self.acc, label="accuracy")
         plt.plot(self.x, self.val_acc, label="validation accuracy")

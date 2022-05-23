@@ -5,13 +5,17 @@ from controllers.camera_controller import CameraController
 import threading
 class Controller():
     def __init__(self,function_getter,sys_controller,win):
+        self.win=win
         self.camera_controller = CameraController(win)
         self.system_controller= sys_controller
         self.camera = Camera(function_getter,sys_controller,self.camera_controller)
         self.started = False
+    def get_camera(self):
+        return self.camera
     def start_gesture_recognition(self):
         if self.started is False:
             self.started = True
+            self.win.status_label.setText("Gesture recognition enabled")
             self.t=threading.Thread(name='daemon',target=self.camera.start_windows_gesture_library)
             self.t.start()
 
@@ -21,5 +25,6 @@ class Controller():
             self.camera.stop_gesture_recognition()
             self.t.join()
             self.started=False
+            self.win.status_label.setText("Gesture recognition disabled")
     def get_camera_controller(self):
         return self.camera_controller

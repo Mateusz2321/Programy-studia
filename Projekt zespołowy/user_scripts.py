@@ -1,11 +1,10 @@
-import sys
 import inspect
+import sys
 def get_functions():
-    dictionary={}
     list=inspect.getmembers(sys.modules[__name__], \
         predicate = lambda f: inspect.isfunction(f) and f.__module__ == __name__)
-    dictionary = dict((x, y) for x, y in list)
-    dictionary.pop("get_functions")
+    dictionary = dict(('user_'+x, y) for x, y in list)
+    dictionary.pop("user_get_functions")
     return dictionary
 
 #======================

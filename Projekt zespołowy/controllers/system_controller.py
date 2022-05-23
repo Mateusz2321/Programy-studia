@@ -30,6 +30,8 @@ class SystemController:
         self.current_volume = self.volume.GetMasterVolumeLevel()
         self.camera=None
         self.mouse_steering = None
+    def set_reference(self,function_getter):
+        self.function_getter=function_getter
     def set_camera_reference(self,camera):
         self.camera= camera
         self.mouse_steering = GestureMouseSteering(camera)
@@ -128,8 +130,43 @@ class SystemController:
         pyautogui.press('tab')
         pyautogui.keyUp('alt')
     def mouse_start(self):
-        print('mouse_start')
         self.mouse_steering.start_mouse_steering()
-        print('mouse_stop')
+        self.function_getter.set_time_before()
     def stop_mouse(self):
         self.mouse_steering.stop_mouse_steering()
+
+    def window_left(self):
+        pyautogui.keyDown('win')
+        pyautogui.press('left')
+        pyautogui.keyUp('win')
+    def window_right(self):
+        pyautogui.keyDown('win')
+        pyautogui.press('right')
+        pyautogui.keyUp('win')
+    def escape(self):
+        pyautogui.press('esc')
+    def set_controller_reference(self,cont):
+        self.controller_reference=cont
+
+    def do_nothing(self):
+        pass
+    def minimize_all_windows(self):
+        pyautogui.keyDown('win')
+        pyautogui.press('d')
+        pyautogui.keyUp('win')
+    def preview_of_opened_windows(self):
+        pyautogui.keyDown('win')
+        pyautogui.press('tab')
+        pyautogui.keyUp('win')
+    def open_action_center(self):
+        pyautogui.keyDown('win')
+        pyautogui.press('a')
+        pyautogui.keyUp('win')
+    def page_up(self):
+        pyautogui.press('pageup')
+    def page_down(self):
+        pyautogui.press('pagedown')
+    def space(self):
+        pyautogui.press('space')
+    def pause(self):
+        pyautogui.press('pause')

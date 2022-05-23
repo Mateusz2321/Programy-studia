@@ -31,7 +31,7 @@ class ModelFactory:
         
     def __rgbmodel(self):
         if self.trained:
-            return load_model("../"+self.rgbpath)
+            return load_model(self.rgbpath)
         else:
             return self.__rgb() #dodałem self.
         

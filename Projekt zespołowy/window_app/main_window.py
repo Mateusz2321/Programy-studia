@@ -1,6 +1,4 @@
-
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtMultimediaWidgets import QVideoWidget
+from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
@@ -14,6 +12,23 @@ from controllers.functions_getter import FunctionsGetter
 from controllers.system_controller import SystemController
 
 class Ui_MainWindow(object):
+    def __init__(self):
+        self.close_time=False
+        self.name_mapper = NameMapper()
+        self.sys_cont = SystemController()
+        self.func_get = FunctionsGetter(self.sys_cont)
+        self.cont = Controller(self.func_get, self.sys_cont, self)
+        self.sys_cont.set_camera_reference(self.cont.get_camera_controller())
+    def get_controller(self):
+        return self.cont
+    def get_close_time(self):
+        return self.close_time
+    def close_application(self):
+        self.close_time = True
+        self.cont.get_camera_controller().release_camera()
+        self.cont.get_camera().get_mapping().end_thread()
+        time.sleep(0.1)
+        sys.exit(0)
     def set_cameras_combo_box(self,lst):
         self.camerasComboBox.clear()
         for a in lst:
@@ -21,11 +36,6 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(725, 571)
-        self.name_mapper=NameMapper()
-        self.sys_cont=SystemController()
-        self.func_get=FunctionsGetter(self.sys_cont)
-        self.cont=Controller(self.func_get,self.sys_cont,self)
-        self.sys_cont.set_camera_reference(self.cont.get_camera_controller())
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -37,8 +47,7 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.gestureTab)
         self.gridLayout.setObjectName("gridLayout")
 
-
-        self.mainTab = QtWidgets.QWidget()          ###########
+        self.mainTab = QtWidgets.QWidget()
         self.mainTab.setObjectName("mainTab")
         self.mainLayout = QtWidgets.QGridLayout(self.mainTab)
         self.mainLayout.setObjectName("mainLayout")
@@ -50,6 +59,9 @@ class Ui_MainWindow(object):
         self.stop_button.setObjectName("stop_button")
         self.stop_button.clicked.connect(lambda: self.cont.stop_gesture_recognition())
         self.mainLayout.addWidget(self.stop_button, 2, 1, 1, 1)
+        self.status_label = QtWidgets.QLabel("Gesture recognition disabled")
+        self.status_label.setObjectName("status_label")
+        self.mainLayout.addWidget(self.status_label, 3, 1, 1, 1)
         self.applyButton_2 = QtWidgets.QPushButton(self.gestureTab)
         self.applyButton_2.setObjectName("applyButton_2")
         self.gridLayout.addWidget(self.applyButton_2, 3, 3, 1, 1)
@@ -161,30 +173,22 @@ class Ui_MainWindow(object):
         self.FeedLabel = QLabel()
         self.VBL.addWidget(self.FeedLabel)
 
-
         self.camerasComboBox = QtWidgets.QComboBox(self.cameraTab)
-
-
+        self.camera_refresh_button = QtWidgets.QPushButton("Refresh camera list")
+        self.VBL.addWidget(self.camera_refresh_button)
         self.VBL.addWidget(self.camerasComboBox)
-
-        self.Worker1 = Worker1(self.cont)
-
+        self.VBL.addWidget(self.camera_refresh_button)
+        self.Worker1 = Worker1(self.cont,self)
+        self.camera_refresh_button.clicked.connect(lambda: self.cont.get_camera_controller().refresh_camera_list())
         arr = self.cont.get_camera_controller().get_all_cameras()
         for i in arr:
             self.camerasComboBox.addItem(str(i))
-
 
         self.camerasComboBox.activated.connect(lambda:
             self.cont.get_camera_controller().set_used_camera_number(int(self.camerasComboBox.currentText())))
 
         self.Worker1.start()
         self.Worker1.ImageUpdate.connect(self.ImageUpdateSlot)
-        # self.setLayout(self.VBL)
-
-        # self.videoVidget = QVideoWidget(self.cameraTab)
-        # self.videoVidget.setGeometry(QtCore.QRect(200, 70, 311, 141))
-        # self.videoVidget.setLocale(QtCore.QLocale(QtCore.QLocale.Polish, QtCore.QLocale.Poland))
-        # self.videoVidget.setObjectName("videoVidget")
 
         self.tabWidget.addTab(self.cameraTab, "")
         self.horizontalLayout_2.addWidget(self.tabWidget)
@@ -226,40 +230,35 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.mainTab), _translate("MainWindow", "Start"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.gestureTab), _translate("MainWindow", "Gesty"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.cameraTab), _translate("MainWindow", "Kamera"))
-        # if self.cameraTab.isActiveWindow():
 
     def ImageUpdateSlot(self, Image):
         self.FeedLabel.setPixmap(QPixmap.fromImage(Image))
 
-    def CancelFeed(self):
-        self.Worker1.stop()
+    def is_active(self):
+        return self.cameraTab.isVisible()
 
 class Worker1(QThread):
-    def __init__(self,controller):
+    def __init__(self,controller,win):
         super().__init__()
         self.controller=controller
+        self.win=win
+        self.camera=self.controller.get_camera_controller()
+
     ImageUpdate = pyqtSignal(QImage)
 
     def run(self):
-        self.ThreadActive = True
-        self.camera=self.controller.get_camera_controller()
 
-        while self.ThreadActive:
-            ret, frame = self.camera.get_camera_image()
-            if ret is True:
-                Image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                FlippedImage = cv2.flip(Image, 1)
-                ConvertToQtFormat = QImage(FlippedImage.data, FlippedImage.shape[1], FlippedImage.shape[0],
-                                           QImage.Format_RGB888)
-                Pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
-                self.ImageUpdate.emit(Pic)
-
-
-
-    def stop(self):
-        self.ThreadActive = False
-        self.quit()
-
+        while self.win.get_close_time() is False:
+            if self.win.is_active():
+                ret, frame = self.camera.get_camera_image()
+                if ret is True:
+                    Image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                    FlippedImage = cv2.flip(Image, 1)
+                    ConvertToQtFormat = QImage(FlippedImage.data, FlippedImage.shape[1], FlippedImage.shape[0],
+                                               QImage.Format_RGB888)
+                    Pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
+                    self.ImageUpdate.emit(Pic)
+            time.sleep(0.02)
 
 if __name__ == "__main__":
     import sys
