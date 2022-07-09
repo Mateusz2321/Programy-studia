@@ -3,16 +3,19 @@ import cv2
 import mediapipe as mp
 import pyautogui
 from win32api import GetSystemMetrics
-from win10toast import ToastNotifier as tn
 import time
+
+
 class GestureMouseSteering:
+
     def __init__(self,camera):
         self.active=True
         self.cam = camera
         self.sensitivity=10
-        self.toaster = tn()
+
     def stop_mouse_steering(self):
         self.active=False
+
     def start_mouse_steering(self):
         self.active = True
         mp_hands = mp.solutions.hands
@@ -73,12 +76,8 @@ class GestureMouseSteering:
                             right_mouse_click_lock = False
                         mouse_x_before = mouse_x
                         mouse_y_before = mouse_y
-                    elif points[0][1]< points[5][1] and points[5][1] < points[8][1] :   #palec wskazujący w dół-wyjście
-                        self.toaster.show_toast("Gesture detected",
-                                                                       "Gesture name: mouse_stop",
-                                                                       duration=1.9, icon_path=None,threaded = True)
+                    elif points[0][1]< points[5][1] and points[5][1] < points[8][1] :
+                        self.cam.win.cont.get_camera().get_mapping().set_mouse_end_message()
                         return
+            time.sleep(0.0001)
 
-if __name__ == "__main__":
-    c=GestureMouseSteering()
-    c.start_mouse_steering()
