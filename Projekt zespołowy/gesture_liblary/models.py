@@ -1,7 +1,11 @@
+#!/usr/bin/env python
+# coding: utf-8
 
-from keras.models import load_model
-from keras.layers import Conv2D,TimeDistributed,LSTM,Input,Dense,Dropout,BatchNormalization,MaxPooling2D,concatenate,GlobalAveragePooling2D
+
+from keras.models import Model,load_model
+from keras.layers import Conv2D,TimeDistributed,LSTM,Flatten,Input,Dense,Dropout,MaxPool2D,BatchNormalization,MaxPooling2D,merge,Activation,add,concatenate,GlobalAveragePooling2D
 from keras.models import Model
+#from keras.optimizers import Adam
 from keras.layers.advanced_activations import LeakyReLU
 
 class ModelType:
@@ -29,20 +33,20 @@ class ModelFactory:
         if self.trained:
             return load_model(self.rgbpath)
         else:
-            return self.__rgb()
+            return self.__rgb() #dodałem self.
         
         
     def __flowmodel(self):
         if self.trained:
             return load_model(self.flowpath)
         else:
-            return self.__flow()
+            return self.__flow()  #dodałem self.
         
         
     def __fullmodel(self):
         if self.trained:
             return load_model(self.fullpath)
-        else:
+        else:                #dodałem self.
             return self.__full() # full training should be done after seperate rgb and flow trainings
         
     def __full(self):
@@ -178,10 +182,16 @@ class ModelFactory:
 
         pred = Dense(27,activation ='softmax')(x)
 
+
         flowmodel = Model(inputs=flowinput,outputs=pred,name='flow_model')
 
+        #flowmodel.compile(Adam(0.0001),loss='categorical_crossentropy',metrics=['categorical_accuracy'])
+        #flowmodel.summary()
+    
         return flowmodel
 
+
+# In[ ]:
 
 
 
