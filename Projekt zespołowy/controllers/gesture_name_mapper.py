@@ -1,5 +1,7 @@
 
+
 class NameMapper():
+
     def __init__(self):
         self.gesture_names = {1: "Drumming fingers",
                               2: "Pulling hand in",
